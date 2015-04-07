@@ -1,0 +1,18 @@
+# General
+name: Equipo 2
+description: "Sistemas Empotrados y Computación Ubicua"
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 5
+permalink: /:title
+
+# Social share and comments.
+twitter: yourusername
+github: yourusername
+google: +yourusername
+
+# RSS feed
+rss-feed-limit: 10
+rss-show-full: "no"
