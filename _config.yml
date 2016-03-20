@@ -8,6 +8,12 @@ highlighter: rougue
 paginate: 5
 permalink: /:title
 
+collections:
+ courses:
+  output: true
+ posts:
+  output: true
+
 # Social share and comments.
 twitter: yourusername
 github: yourusername
