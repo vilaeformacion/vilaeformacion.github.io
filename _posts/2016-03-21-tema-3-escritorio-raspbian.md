@@ -104,4 +104,64 @@ Una vez hemos visto la conexión por wifi, pasaremos a ver la conexión por Blue
 
 Por defecto Raspberry Pi, no tiene un cliente gráfico para la comunicación Bluetooth. Es por esto que utilizaremos la consola de comandos y en concreto el comando _bluetoothctl_.
 
+Para ello, utilizaremos la consola de comandos. Esta consola nos permite realizar una serie de acciones por medio de comandos y otros programas con interfaz de texto. Para acceder a la consola de comandos, pulsaremos el icono que hay en la parte superior con forma de pantalla negra. ![consolacomandos]({{ site.url }}/resources/tema3/iconoconsola.png)
 
+En temas posteriores, hablaremos de la consola de comandos. **NOTA**: a la consola de comandos también se la conoce como _Terminal_.
+
+Seguidamente vamos a entrar a la utilidad de configuración de Bluetooth. Para ello ejecutamos el siguiente comando. Cuando ejecutamos un comando simplemente escribimos la orden con los respectivos parametros y pulsamos <ENTER>. El comando a ejecutar es:
+
+```
+pi@isami$ bluetoothctl
+```
+
+Observaremos que entra en el programa de configuración de bluetooth. En este punto podemos hacer 2 cosas en función si nuestro dispositivo ha sido ya configurado o no. Comenzaremos con la opción de que nuestro dispositivo no ha sido configurado; por lo tanto hay que "parearlo".
+
+Para parear un dispositivo, primero tenemos que encontrarlo y obtener su MAC. La dirección MAC es una serie de números en base 16(hexadecimal), que identifica nuestro dispositivo de forma unica.
+
+Comenzaremos activando el agente para que nos ayude a configurar nuestros dispositivos. Para ello ejecutamos la siguiente orden:
+
+```
+[bluetoothctl]#agent on
+```
+
+![bluetoothagente]({{ site.url }}/resources/tema3/bluetooth1.png)
+
+Una vez tenemos el agente activaremos el scaneo de dispositivos. con la orden _scan on_.
+
+```
+[bluetoothctl]#scan on
+```
+
+y cuando nuestro dispositivo aparezca en pantalla, usaremos la orden _scan off_ para finalizar el escaneo.
+
+```
+[bluetoothctl]#scan off
+```
+
+![bluetoothscan]({{ site.url }}/resources/tema3/bluetooth2.png)
+
+Tras saber la dirección MAC, pasaremos a realizar el pareado. Para ello utilizaremos la orden _pair_ poniendo despues la dirección mac.
+
+```
+[bluetoothctl]# pair DC:2C:51:5E:26
+```
+
+Seguidamente nos aparecerá un código que sera el que tenemos que introducir en nuestro dispositivo para terminar el pareado.
+
+![bluetoothscan]({{ site.url }}/resources/tema3/bluetooth3.png)
+
+Por último solo queda conectarnos al dispositivo. Usaremos el comando _connect_ poniendo posteriormente la dirección MAC.
+
+```
+[bluetoothctl]#connect DC:2C:51:5E:26
+```
+
+![bluetoothscan]({{ site.url }}/resources/tema3/bluetooth4.png)
+
+**NOTA**: Si ya teniamos previamente pareado el dispositivo solo es necesario realizar la orden _connect_.
+
+### Referencias
+
+* [Raspbian](https://www.raspbian.org)
+* [BluetoothCTL](https://wiki.archlinux.org/index.php/bluetooth)
+* [Booleanbite](http://booleanbite.com)
