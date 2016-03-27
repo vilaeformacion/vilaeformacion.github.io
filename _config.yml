@@ -3,7 +3,7 @@ name: Vilae Formacion
 description: "Formación TIC"
 
 markdown: kramdown
-highlighter: rouge
+highlighter: redcarpet2
 
 paginate: 5
 permalink: /:title
