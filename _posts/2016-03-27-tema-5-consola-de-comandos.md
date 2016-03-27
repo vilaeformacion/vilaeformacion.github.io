@@ -18,20 +18,20 @@ La consola de comandos nos permite realizar acciones de forma que podemos realiz
 
 La consola de comandos nos muestra un promt o mensaje que muestra el usuario con el que estamos conectados, y por otro lado en que máquina estamos conectados. Por ejemplo:
 
-```bash
+``` 
 pi@zerasul:~$ _
 ```
 
 para introducir un comando pondremos el comando en concreto y pulsaremos enter. Por ejemplo el comando _pwd_ nos muestra en que carpeta del sistema nos encontramos.
 
-```bash
+``` 
 pi@zerasul:~$ pwd
 /home/pi
 ```
 
 vemos que nos encontramos en la carpeta _/home/pi_ es decir, nuestra carpeta de usuario. tambien podemos mostrar el listado del directorio donde nos encontramos con la orden _ls_.
 
-```bash
+``` 
 pi@zerasul:~$ ls
 Desktop
 Documents
@@ -46,14 +46,14 @@ SI queremos cambiar de directorio, usaremos el comando _cd_ seguido del nombre d
 
 **NOTA**: Si no nos acordamos correctamente del comando o del nombre del directorio, podemos usar la tecla < tabulador > y nos mostrara una pequeña ayuda.
 
-```bash
+``` 
 pi@zerasul:~$ cd Dekstop
 pi@zerasul:~/Dekstop$ _
 ```
 
 Como podemos ver al cambiar de directorio, nos aparece en el Prompt. Si por el contrario queremos ir al directorio anterior, usaremos la orden anteriormente mencionada, pero añadiremos "..". Esto indica que queremos ir al directorio padre. Si por el contrario queremos mencionar al directorio actual, usaremos solo 1 punto.
 
-```bash
+``` 
 pi@zerasul:~/Desktop$ cd ..
 pi@zerasul:~$ _
 ``` 
@@ -69,14 +69,14 @@ En todo momento podemos ver el historial de los últimos comandos introudciros c
 
 Como hemos visto anteriormente, hay una serie de permisos que tienen los usuarios del sistema. Hay que diferenciar que hay 2 modos de usuario por asi decirlo. El modo usuario, que tiene permisos limitados que podemos diferenciarlo que el prompt acaba en '$'. Mientras que el segundo modo es el modo superadministrador que su prompt acaba en '#' hay que decir, que tenemos que tener cuidado con el uso de permisos de administración ya que podemos dejar nuestra Raspberry Pi **INUTILIZADA**.
 
-```bash
+``` 
 pi@zerasul:~$ _ # modo usuario
  pi@zerasul:~# _ # modo administrador
 ```
 
 Podemos usar el comando _sudo_ para ejecutar un único comando en modo administrador.
 
-```bash
+``` 
 pi@zerasul:~$ sudo ls /root
 ```
 
@@ -84,7 +84,7 @@ o si no queremos estar introduciendo la orden sudo, podemos entrar con el usuari
 
 **NOTA**: no es recomendable usar mucho el modo administrador.
 
-```bash
+``` 
 pi@zerasul:~$ sudo su
 root@zerasul:~# _
 ```
@@ -99,7 +99,7 @@ Con la consola de comandos podemos realizar una serie de operaciones para maneja
 
 Nos permite cambiar de directorio.
 
-```bash
+``` 
 pi@zerasul:~$ cd Desktop
 ```
 
@@ -109,13 +109,13 @@ Nos permite copiar archivos funciona de la siguiente forma.
 
 copy < origen > < destino >
 
-```bash
+``` 
 pi@zerasul:~$ copy hola.txt hola2.txt
 ```
 
 **NOTA**: si queremos copiar un directorio tenemos que añadir la opcion -R.
 
-```bash
+``` 
 pi@zerasul:~$ copy -R hola hola2
 ```
 
@@ -125,13 +125,13 @@ Permite mover archivos.
 
 copy < origen > < destino >
 
-```bash
+``` 
 pi@zerasul:~$ mv hola.txt hola2.txt # si es en el mismo directorio renombra el fichero.
 ```
 
 **NOTA**: si queremos mover un directorio tenemos que añadir la opcion -R.
 
-```bash
+``` 
 pi@zerasul:~$ mv -R hola hola2
 ```
 
@@ -141,7 +141,7 @@ Permite borrar un fichero. Hay que tener cuidado al utilizar esta orden.
 
 rm < fichero o directorio (con la opcion -R ) >
 
-```bash
+``` 
 pi@zerasul:~$ rm fichero.txt
 ```
 
@@ -153,7 +153,7 @@ pi@zerasul:~$ rm fichero.txt
 
 Permite ver el contenido de un archivo.
 
-```bash
+``` 
 pi@zerasul:~$ cat /proc/cpuinfo
 ```
 
@@ -161,7 +161,7 @@ pi@zerasul:~$ cat /proc/cpuinfo
 
 El editor de textos nano permite editar archivos de texto de forma sencilla a traves de una serie de comandos. Existen otros editores de texto como el _vi_ o el _vim_. Para acceder al editor de textos nanos usaremos la siguiente orden.
 
-```bash
+``` 
 pi@zerasul:~$ nano fichero.txt
 ```
 
@@ -177,7 +177,7 @@ Para comprimir un archivo usaremos la siguiente sintaxis.
 
  tar cvf archivo.tar < lista de ficheros>
 
-```bash
+``` 
 pi@zerasul:~$ tar miarchivo.tar fichero1.txt fichero2.txt
 ```
 
@@ -185,7 +185,7 @@ Para descomprimir un archivo usaremos la siguiente sintaxis.
 
  tar xvf archivo.tar
 
-```bash
+``` 
 pi@zerasul:~$ tar xvf miarchivo.tar
 ```
 
@@ -193,7 +193,7 @@ pi@zerasul:~$ tar xvf miarchivo.tar
 
 Con la orden wget podemos descargarnos un fichero usando una dirección web. Por ejemplo
 
-```bash
+``` 
 pi@zerasul:~$ wget http://miweb.com/miarchivo.txt
 ```
 
@@ -201,23 +201,23 @@ pi@zerasul:~$ wget http://miweb.com/miarchivo.txt
 
 Con apt-get en raspbian y el las distribuciones basadas en Debian, podemos instalar nuevos paquetes y funcionalidades a nuestro sistema. Este manejador de paquetes permite acutalizar los paquetes existentes y obtener nuevos. Seguidamente mostraremos la opción de como instalar el reproductor multimedia vlc.
 
-```bash
+``` 
 pi@zerasul:~$ apt-get install vlc # esta orden dara error ya que necesitamos permisos de administrador.
 ```
 
-```bash
+``` 
 pi@zerasul:~$ sudo apt-get install vlc
 ```
 
 Para actualizar nuestro software primero debemos actualizar los repositorios con la orden _update_.
 
-```bash
+``` 
 pi@zerasul:~$ sudo apt-get update
 ```
 
 Por último, para actualizar nuestro software usaremos la orden upgrade.
 
-```bash
+``` 
 pi@zerasul:~$ sudo apt-get upgrade
 ```
 
@@ -225,7 +225,7 @@ Con este ultimo apartado, nos quedaremos para el último tema de este curso de i
 
 ### Referencias
 
-* [Linux Commands](http://ss64.com/bash/)
+* [Linux Commands](http://ss64.com/ /)
 * [Nano](http://mintaka.sdsu.edu/reu/nano.html)
 * [Vim](http://www.vim.org/docs.php)
 * [Tar](http://www.computerhope.com/unix/utar.htm)
