@@ -95,3 +95,56 @@ La recolección de basura (garbage collection) es la técnica por la cual el ent
 Tras ver las caracteristicas de la Programación Orientada a Objetos, vamos a pasar a ver la sintaxis de este lenguaje de Programación.
 
 ### El Lenguaje de Programación Java
+
+Java es un lenguaje de programación de propósito general, concurrente, orientado a objetos que fue diseñado específicamente para tener tan pocas dependencias de implementación como fuera posible. Su intención es permitir que los desarrolladores de aplicaciones escriban el programa una vez y lo ejecuten en cualquier dispositivo (conocido en inglés como WORA, o "write once, run anywhere"), lo que quiere decir que el código que es ejecutado en una plataforma no tiene que ser recompilado para correr en otra. Java es, a partir de 2012, uno de los lenguajes de programación más populares en uso, particularmente para aplicaciones de cliente-servidor de web, con unos 10 millones de usuarios reportados.
+
+El lenguaje de programación Java fue originalmente desarrollado por James Gosling de Sun Microsystems (la cual fue adquirida por la compañía Oracle) y publicado en 1995 como un componente fundamental de la plataforma Java de Sun Microsystems. Su sintaxis deriva en gran medida de C y C++, pero tiene menos utilidades de bajo nivel que cualquiera de ellos. Las aplicaciones de Java son generalmente compiladas a bytecode (clase Java) que puede ejecutarse en cualquier máquina virtual Java (JVM) sin importar la arquitectura de la computadora subyacente.
+
+El lenguaje de Programación Java tiene las siguientes caracteristicas:
+
+* Orientado a Objetos
+
+Java es orientado a objetos por lo que tiene la gran mayoria de las caracteristicas de la programación orientada a objetos; como el poliformismo, ocultación, modularidad, herencia,etc...
+
+* Independencia de la Plataforma
+
+La segunda característica, la independencia de la plataforma, significa que programas escritos en el lenguaje Java pueden ejecutarse igualmente en cualquier tipo de hardware. Este es el significado de ser capaz de escribir un programa una vez y que pueda ejecutarse en cualquier dispositivo, tal como reza el axioma de Java, "write once, run anywhere".
+
+Para ello, se compila el código fuente escrito en lenguaje Java, para generar un código conocido como “bytecode” (específicamente Java bytecode)—instrucciones máquina simplificadas específicas de la plataforma Java. Esta pieza está “a medio camino” entre el código fuente y el código máquina que entiende el dispositivo destino. El bytecode es ejecutado entonces en la máquina virtual (JVM), un programa escrito en código nativo de la plataforma destino (que es el que entiende su hardware), que interpreta y ejecuta el código. Además, se suministran bibliotecas adicionales para acceder a las características de cada dispositivo (como los gráficos, ejecución mediante hebras o threads, la interfaz de red) de forma unificada. Se debe tener presente que, aunque hay una etapa explícita de compilación, el bytecode generado es interpretado o convertido a instrucciones máquina del código nativo por el compilador JIT (Just In Time).
+
+* Recolector de basura
+
+En Java el problema fugas de memoria se evita en gran medida gracias a la recolección de basura (o automatic garbage collector). El programador determina cuándo se crean los objetos y el entorno en tiempo de ejecución de Java (Java runtime) es el responsable de gestionar el ciclo de vida de los objetos. El programa, u otros objetos pueden tener localizado un objeto mediante una referencia a éste. Cuando no quedan referencias a un objeto, el recolector de basura de Java borra el objeto, liberando así la memoria que ocupaba previniendo posibles fugas (ejemplo: un objeto creado y únicamente usado dentro de un método sólo tiene entidad dentro de éste; al salir del método el objeto es eliminado).
+
+#### Sintaxis
+
+El lenguaje de programación Java, tiene una sintaxis de forma que permita declarar clases como sus propiedades y sus métodos.
+
+* Clase
+
+Para definir una clase utilizaremos un archivo por cada clase que debera llamarse igual que la clase. 
+
+```java
+
+public class HolaMundo{
+
+}
+```
+
+Como podemos ver en el ejemplo antes primero empezaremos con la palabra reservada ```public``` la cual nos indica el acceso de esta clase. En Java se define los siguientes modificadores de acceso:
+
+* _public_: indica que el acceso es publico y que todas las clases pueden acceder a esta clase, objeto o propiedad.
+* _private_: indica que solo la propia clase puede acceder a sus propiedades, metodos u otras clases internas.
+* _protected_: Indica que solo la propia clase y las que hereden esta, pueden acceder a sus propiedades o métodos.
+
+Por último, si no se especifica un modificador de acceso, se tomará por defecto el acceso por paquete. Esto quiere decir que solo las clases de la misma carpeta tienen acceso a él.
+
+Una vez vistos los modificadores de acceso, veremos que esta la palabra reservada _class_ la cual indica que estamos definiendo una clase. Después establecemos el nombre de esta que debe ser igual que el nombre del fichero; por ejemplo en este caso, la clase se llama _HolaMundo_ por lo que el fichero debe llamarse _HolaMundo.java_ sino habrá un error de compilación.
+
+Seguidamente vemos que se abre y cierran llaves la cual define un bloque de código o definición.
+
+
+### Referencias
+
+* [Programación Orientada a Objetos](https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos)
+* [Lenguaje de programación Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n))
