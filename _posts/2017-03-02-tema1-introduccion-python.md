@@ -95,3 +95,11 @@ Al pulsar enter veremos lo siguiente:
 
  Este es el primer programa en python y es el famoso "Hola Mundo"; simplemente muestra por pantalla un mensaje. por lo que podemos ver la primera instrucción que podemos utilizar en python. 
  La orden ```print``` esta orden muestra un mensaje por pantalla. El mensaje debe estar entre comillas ' '.
+
+ Con esto hemos visto el primer tema; que trata de mostrar como instalar python y para que sirve este. En el próximo tema, mostraremos los operadores de python y veremos algunos ejercicios.
+
+### Referencias
+
+ * [Python (Wikipedia)](https://es.wikipedia.org/wiki/Python)
+ * [Python Documentación Oficial](https://www.python.org/)
+ * [Presentación Introducción a Python](http://slides.com/zerasul/python#/)
