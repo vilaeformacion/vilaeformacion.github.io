@@ -103,7 +103,7 @@ Como vemos en el anterior ejemplo tenemos el método __init__ el cual nos permit
 coche1=Coche(color='blanco',marca='Kia',modelo='rio',matricula='22233HFG')
 ```
 
-Como vemos en el anterior ejemplo pasamos los datos de forma implicita (aunque pueden pasarse de forma explicita también). Con esto ya hemos visto la introducción a la programación orientada a objetos. En la siguiente lección, estudiaremos más características de la Programación Orientada a Objetos.
+Como vemos en el anterior ejemplo pasamos los datos de forma implicita (aunque pueden pasarse de forma explicita también). Con esto ya hemos visto la introducción a la programación orientada a objetos. En la siguiente lección, estudiaremos más características de la Programación Orientada a Objetos; como puede ser la herencia.
 
 ### Ejercicios
 
